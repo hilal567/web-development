@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2018 at 07:09 AM
+-- Generation Time: Apr 27, 2018 at 07:35 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web 2`
+-- Database: `web(1)`
 --
 
 -- --------------------------------------------------------
@@ -82,6 +82,7 @@ CREATE TABLE `unit` (
 
 CREATE TABLE `unit_course` (
   `unit_id` varchar(30) NOT NULL,
+  `courseid` int(11) NOT NULL,
   `unit_name` varchar(30) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
