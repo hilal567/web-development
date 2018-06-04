@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2018 at 02:35 PM
+-- Generation Time: May 25, 2018 at 07:36 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -65,6 +65,20 @@ CREATE TABLE `sacco` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `stages`
+--
+
+CREATE TABLE `stages` (
+  `id` int(11) NOT NULL,
+  `stage_name` varchar(45) NOT NULL,
+  `latitude` int(11) NOT NULL,
+  `longtitude` int(11) NOT NULL,
+  `isActive` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -119,6 +133,12 @@ ALTER TABLE `sacco`
   ADD PRIMARY KEY (`sacco_id`);
 
 --
+-- Indexes for table `stages`
+--
+ALTER TABLE `stages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -151,6 +171,12 @@ ALTER TABLE `route`
 --
 ALTER TABLE `sacco`
   MODIFY `sacco_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `stages`
+--
+ALTER TABLE `stages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
