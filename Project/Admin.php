@@ -74,6 +74,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
 }
 
 #navbar a:hover {
@@ -110,21 +111,21 @@ body {
 </div>
 
 <div class="tab">
-  <button class="new_project">+ new project</button>
+  <button class="new_project"><a href="index.html">+ new project</a></button>
   <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Memeber list</button>
   <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Finances</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Staff</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Active users
    <hr/></button>
-   <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">To do</button>
-    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Promotions</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">To do</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Promotions</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Analytics</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tasks
    <hr/></button>
     <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Reset Staff password</button>
  
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Messages
-   <hr/></button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')" >Messages
+   </button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Help</button>
   
   <button class="tablinks" onclick="openCity(event, 'Paris')">Logout</button>
@@ -145,12 +146,15 @@ body {
 </div>
 
 <div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+  <h6>this is where the page will be</h6>
+  <ul>
+    <li><a href="index.html"></a></li>
+  </ul>
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function openCity(evt,cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {

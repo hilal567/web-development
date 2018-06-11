@@ -1,3 +1,8 @@
+<?php 
+/* Main page with two forms: sign up and log in */
+   include 'DBConnector';
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +20,7 @@
 </div>
 <div id="overlay">
 
-  <form class="modal-content" method="post" action="reg.php">
+  <form class="modal-content" method="post" action="register.php">
     <div class="container">
       <h4>Sign Up</h4>
       <p>Please fill in this form to create an account.</p>
