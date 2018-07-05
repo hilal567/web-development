@@ -1,9 +1,14 @@
 <?php
-require 'DBConnect';
-$sql= "SELECT count(*) FROM user GROUP BY YEAR(date) ORDER BY date";
+require_once("connect.php");
+$sql= "SELECT count(*) FROM user ";
 $result = mysqli_query($link,$sql);
-while ($row = mysql_fetch_array($result)) {
+try {
+    while ($row = mysql_fetch_array($result)) {
    $data[] = $row['value'];
+}
+
+} catch (Exception $e) {
+    echo 'Message:'.$e->getMessage();
 }
 
 

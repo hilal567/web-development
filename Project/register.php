@@ -15,7 +15,7 @@ $last_name = $mysqli->real_escape_string($_POST['lastname']);
 $email = $mysqli->real_escape_string($_POST['email']);
 $password = $mysqli->real_escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
 $hash = $mysqli->real_escape_string( md5( rand(0,1000) ) );
-      
+$date=date("d/m/y h:i:sa");     
 
 // Check if user with that email already exists
 $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
@@ -30,8 +30,8 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql = "INSERT INTO users (first_name, last_name, email, password, hash) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash')";
+    $sql = "INSERT INTO users (first_name, last_name, email, password, hash, datetime) " 
+            . "VALUES ('$first_name','$last_name','$email','$password', '$hash', '$date ')";
 
     // Add user to the database
     if ( $mysqli->query($sql) ){
@@ -45,7 +45,7 @@ else { // Email doesn't already exist in a database, proceed...
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
-        $subject = 'Account Verification (digitalmatatu@gmail.com )';
+        $subject = 'Account Verification (digitalmatatu@gmail.com)';
         $message_body = '
         Hello '.$first_name.',
 
