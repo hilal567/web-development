@@ -56,37 +56,7 @@ session_start();
   </div>
 <div id="signup">
 </div>
-<div class="section padding-in-section">
-        <h2 class="heading">Benefits of Uber</h2>
-        <div class="main-column">
 
-        <div class="center-box">
-            <div class="text-column">
-                <div class="inner-box">
-                    <h2 class="heading-small">Easiest way around</h2>
-                    <p>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</p>
-                </div>
-            </div>
-
-            <div class="text-column">
-                <div class="inner-box">
-                    <h2 class="heading-small">Anywhere, anytime</h2>
-                    <p>Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on Uber for a ride—no reservations required.</p>
-                </div>
-            </div>
-
-            <div class="text-column border-bottom-none">
-                <div class="inner-box">
-                    <h2 class="heading-small">Low-cost to luxury</h2>
-                    <p>Economy cars at everyday prices are always available. For special occasions, no occasion at all, or when you just a need a bit more room, call a black car or SUV.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-<div id="footer">
-  <h2>Copyright 2018 Strathmore University</h2>
 
 </div>
 <script>
@@ -103,6 +73,12 @@ function myFunction() {
   }
 }
 </script>
+
+  
+
+<div id="footer">
+  <h2>Copyright 2018 Strathmore University</h2>
+
 
 </body>
 </html>
