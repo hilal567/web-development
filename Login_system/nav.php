@@ -17,13 +17,9 @@
     <header style=" background-color: #1ab188">
       <a href="#home" class="logo" data-scroll ></a>
       <nav class="nav-collapse">
-        <ul>
-          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
-          <li class="menu-item"><a href="#about" data-scroll>About</a></li>
-          <li class="menu-item"><a href="#projects" data-scroll>Projects</a></li>
-          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
-          <li class="menu-item"><a href="http://www.google.com" target="_blank">Google</a></li>
-        </ul>
+        
+          <a href="login2.php">Log in</a>
+          
       </nav>
     </header>
 

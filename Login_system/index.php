@@ -12,7 +12,7 @@ session_start();
    <title>Adtile Fixed Nav</title>
     <meta name="author" content="Adtile">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="">
   <?php include 'css/css.html'; ?>
 </head>
 
@@ -43,32 +43,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   hr{
     color: white;
   }
+  
+  .form{
+    background-color: grey;
+  }
+  h2{
+    color: white;
+    float:left;
+  }
 </style>
 <body>
-  <a href="login2.php">Log in</a>
+  
   <div class="form">
       
       <ul class="tab-group">
-       <!--  <li class="tab"><a href="#signup">Sign Up</a></li> -->
-        <!-- <li class="tab active"><a href="#login">Log In</a></li>
-      </ul>
-       -->
-        <div id="signup">   
-          <h4>please fill in this form to create a free account.</h4><hr/>
+        <li class="tab"><a href="#signup">Sign Up</a></li>
+       <!--  <li class="tab active"><a href="#login"></a></li>
+     -->  </ul>
+       
+        <div id="signup">  
+          <h2>Sign up</h2></br> </br> 
+          <h4>please fill in this form to create a free account.</h4><hr/></br>
           
           <form action="index.php" method="post" autocomplete="off">
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
-                First Name<span class="req">*</span>
+                First Name<span class="req"></span>
               </label>
               <input type="text" required autocomplete="off" name='firstname' />
             </div>
         
             <div class="field-wrap">
               <label>
-                Last Name<span class="req">*</span>
+                Last Name<span class="req"></span>
               </label>
               <input type="text"required autocomplete="off" name='lastname' />
             </div>
@@ -76,14 +85,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Email Address<span class="req"></span>
             </label>
             <input type="email"required autocomplete="off" name='email' />
           </div>
           
           <div class="field-wrap">
             <label>
-              Set A Password<span class="req">*</span>
+              Set A Password<span class="req"></span>
             </label>
             <input type="password"required autocomplete="off" name='password'/>
           </div>
@@ -100,6 +109,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
+    
 
 </body>
 </html>
+<?php include ("footer.php") ?>
