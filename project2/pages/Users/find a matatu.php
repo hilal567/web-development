@@ -120,32 +120,20 @@
                     var str = distance.substring(0, distance.length - 5); 
                     var x = parseInt(str, 10); 
                     var price = x * 10;
-                  
 
                     dvDistance.innerHTML = ""+ "<br />";
                     dvDistance.innerHTML += "Distance :  " + distance + "<br />"+ "<br />";
                     dvDistance.innerHTML += "Price :  " + price +" Ksh"+ "<br />"+ "<br />";
                    dvDistance.innerHTML += "Duration : " + duration;
                    
-                   if (!response.error) {
-                    var distance = response.rows[0].elements[0].distance.text;
-                    var duration = response.rows[0].elements[0].duration.text;
-                    var dvDistance = document.getElementById("dvDistance");
-                    var str = distance.substring(0, distance.length - 5); 
-                    var x = parseInt(str, 10); 
-                    var price = x * 10;
-                    
-                    if (window.XMLHttpRequest) {
-                        xmlhttp = new XMLHttpRequest();
-                    }
-
-                    xmlhttp.open("GET", "ajax.php?uid=" + distance + duration + price, true);
-                    xmlhttp.send();
-
-                    return false;
-
-        }
-           
+                   
+                                  
+                   var disto = distance;
+                    var dur = duration;
+                    var priz = price;
+                    var startdest = document.getElementById("txtSource").value;
+                    var enddest = document.getElementById("txtDestination").value;
+                    var timee = date();
                 } else {
                     alert("Unable to find the distance via road.");
                 }
@@ -186,7 +174,9 @@
                 <?php require_once('findmatatu.php'); ?>
                 </div>
 
- 
+                <div id="hidden">
+                    
+                </div>
             </td>
         </tr>
         <tr>
