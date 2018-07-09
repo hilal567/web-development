@@ -32,7 +32,15 @@ if ($result=mysqli_query($con,$sql))
        
        session_start();
        $_SESSION["user"] = $_GET["loginusername"];
-       header("Location:../../userhome.php ");
+       
+
+
+       if($_SESSION["user"]=="admin"){
+            header("Location:  ../admin/memberslist.php ");
+
+       }else{
+              header("Location:../../userhome.php ");
+       }
 
 
 
