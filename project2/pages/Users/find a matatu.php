@@ -33,6 +33,11 @@
 
     $(document).ready(function () {
         $("#mat").hide();
+        $("#pricez").hide();
+        $("#durationz").hide();
+        $("#sourcez").hide();
+        $("#destinationz").hide();
+        $("#submittrip").hide();
 
 
 
@@ -79,6 +84,7 @@
 
         function GetRoute() {
             $("#mat").show();
+            $("#submittrip").show();
             var Nairobi = new google.maps.LatLng(-1.286541,36.828686);
             var mapOptions = {
                 zoom: 7,
@@ -120,20 +126,24 @@
                     var str = distance.substring(0, distance.length - 5); 
                     var x = parseInt(str, 10); 
                     var price = x * 10;
+                  
 
                     dvDistance.innerHTML = ""+ "<br />";
                     dvDistance.innerHTML += "Distance :  " + distance + "<br />"+ "<br />";
                     dvDistance.innerHTML += "Price :  " + price +" Ksh"+ "<br />"+ "<br />";
                    dvDistance.innerHTML += "Duration : " + duration;
                    
-                   
-                                  
-                   var disto = distance;
-                    var dur = duration;
-                    var priz = price;
-                    var startdest = document.getElementById("txtSource").value;
-                    var enddest = document.getElementById("txtDestination").value;
-                    var timee = date();
+
+                   document.getElementById("pricez").value = price;
+                   document.getElementById("durationz").value = duration;
+                   document.getElementById("sourcez").value = source;
+                   document.getElementById("destinationz").value = destination;
+
+
+
+
+
+
                 } else {
                     alert("Unable to find the distance via road.");
                 }
@@ -171,12 +181,24 @@
                 <div id="dvDistance">
                 </div>
                 <div id="mat" ><br> Available Matatu : &nbsp;
-                <?php require_once('findmatatu.php'); ?>
+                <?php require_once('findmatatu.php'); ?>   
+                
+                </div>
+                <div id="">
+                <form action="savetrip.php" method="get">
+                        <div class="">
+                            <input type="text" name="price" id="pricez" />
+                            <input type="text" name="duration" id="durationz" />
+                            <input type="text" name="source" id="sourcez" />
+                            <input type="text" name="destination" id="destinationz" />
+                            <button type="submit" name="register"  id="submittrip" align = "left">Submit Trip</button>
+
+                        </div>
+                </form>
+
                 </div>
 
-                <div id="hidden">
-                    
-                </div>
+ 
             </td>
         </tr>
         <tr>

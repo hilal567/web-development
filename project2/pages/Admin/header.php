@@ -13,10 +13,10 @@
   <a href="finances.php" class="w3-bar-item w3-button">Finances</a>
   <a href="staff.php" class="w3-bar-item w3-button">Staff</a>
   <a href="users.php" class="w3-bar-item w3-button">Users</a>
-  <a href="promotions.php" class="w3-bar-item w3-button">Promotions</a>
+  <a href="promotions.php" class="w3-bar-item w3-button"> Payments </a>
   <a href="to-do.php" class="w3-bar-item w3-button">To-do</a>
   <a href="reports.php" class="w3-bar-item w3-button">Reports and Data</a>
-  <a href="announcements.php" class="w3-bar-item w3-button">Announcements</a>
+  <a href="logout.php" class="w3-bar-item w3-button">Log Out</a>
   
 </div>
 

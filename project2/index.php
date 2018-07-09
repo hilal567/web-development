@@ -1,200 +1,167 @@
-<?php 
-/* Main page with two forms: sign up and log in */
-   include 'dbconnect.php';
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <link rel="stylesheet" type="text/css" href="resources/style.css">
- 
+    /* Style the links inside the navigation bar */
 
+    .topnav a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      align-self: center;
+    }
+
+    /* Change the color of links on hover */
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add a color to the active/current link */
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .clear {
+      color: white;
+    }
+
+    .menu {
+      float: left;
+      width: 20%;
+      text-align: center;
+    }
+
+    .menu a {
+      background-color: #e5e5e5;
+      padding: 8px;
+      margin-top: 7px;
+      display: inline;
+      width: 100%;
+      color: black;
+      float: right;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .main {
+      float: left;
+      width: 60%;
+      padding: 0 20px;
+      height: 20%;
+      color: black;
+    }
+
+    .right {
+      background-color: #e5e5e5;
+      float: left;
+      width: 40%;
+      padding: 15px;
+      margin-top: 40px;
+      text-align: center;
+      color: black;
+      height: 100%;
+    }
+
+    button {
+      width: 10%;
+      height: 50px;
+      border-radius: 7px;
+      background-color: red;
+    }
+
+    iframe {
+      width: 60%;
+      height: 500px;
+    }
+
+    .lower {
+      margin-top: 40px;
+    }
+
+    footer @media only screen and (max-width:620px) {
+      /* For mobile phones: */
+      .menu,
+      .main,
+      .right {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
-<body>
-  <div id="navbar">
-    <ul>
-      <li>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+  <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+    <div style="overflow:auto;list-style: none;text-decoration: none">
+      <div class="topnav">
         <a class="active" href="#home">Home</a>
-      </li>
-      <li>
         <a href="#news">News</a>
-      </li>
-      <li>
         <a href="#contact">Contact</a>
-      </li>
-      <li>
         <a href="#about">About</a>
-      </li>
-    </ul>
 
-  </div>
-  <div id="sign">
 
-    <form class="modal-content" method="post" action="register.php">
-      <div class="container">
-        <h4>Sign Up</h4>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
-        <label for="name">Name</br>
-        </label>
-        <input type="text" placeholder="first name" name="firstname" required style="width:30%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <input type="text" placeholder="first name" name="lastname" required style="width:30%">
-        </br>
-        <label for="email">Email</br>
-        </label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-        </br>
+        <a class="active" href="login.php"  style="float:right;" > Login</a> </div>
 
-        <label for="psw">Password</br>
-        </label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        </br>
 
-        <label for="psw-repeat">Repeat Password</br>
-        </label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-        </br>
+    </div>
 
-        <label>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
-
-        <p>By creating an account you agree to our
-          <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-        <div class="clearfix">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
-        </div>
+    <div class="main">
+      <h1>About Us</h1>
+      </br>
+      <h2>The Digital Matatus Project</h2>
+      <strong>Digital Matatus</strong> shows how to leverage the ubiquitous nature of cellphone technology in developing countries
+      to collect data for essential infrastructure, give it out freely and in the process spur innovation and improved services
+      for citizens. Conceived out of collaboration between Kenyan and American universities and the technology sector in
+      Nairobi, this project captured transit data for Nairobi, developed mobile routing applications and designed a new transit
+      map for the city. The data, maps and apps are free and available to the public, transforming the way people navigate
+      and think about their transportation system.
+      </br>
+      </br>
+      </br>
+      </br>
+      <iframe src="https://player.vimeo.com/video/63423795?color=ff9933&amp;title=0&amp;byline=0&amp;portrait=0" width="500" height="281"
+        frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      <div class="clear">
+        <h2>Lorum Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+          magna aliquam erat volutpat.</p>
       </div>
-    </form>
-    <div id="description" style="color: white; font-size: 28px;top-margin: 40px">
     </div>
-    <div id="signup">
-    </div>
-  </div>
 
-  <div class="section padding-in-section">
-    <h2 class="heading">Benefits of Uber</h2>
-    <div class="main-column">
 
-      <div class="center-box">
-        <div class="text-column">
-          <div class="inner-box">
-            <h2 class="heading-small">Easiest way around</h2>
-            <p>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go.</br> And when you get
-              there, just step out. </br>Payment is completely seamless.</p>
-          </div>
-        </div>
+    <div class="right">
+      <h2>About</h2>
+      <p>Digital Matatus continues to collect and update data on matatu routes in Nairobi and is beginning projects elsewhere.
+        Our vision is to use technology and local partnerships to make public transit in cities more visible, legible, service
+        oriented, efficient, and open. Our work supports city data collection on transit by developing unique data collection
+        tools and creating a process that involves and engages the transit community in each city. We hope to spread our
+        data collection process to more cities where informal and semi-formal transit is an essential part of the public
+        transit system.</p>
+      <div class="lower">
+        <h2>Contact us</h2>
+        Telephone: +254 795 291 708</br>
+        Our offices: Ole sangale road strathmore university</br>
 
-        <div class="text-column">
-          <div class="inner-box">
-            <h2 class="heading-small">Anywhere, anytime</h2>
-            <p>Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on
-              Uber for a ride—no reservations required.</p>
-          </div>
-        </div>
+        P.O.Box :80100 -23456.
 
-        <div class="text-column border-bottom-none">
-          <div class="inner-box">
-            <h2 class="heading-small">Low-cost to luxury</h2>
-            <p>Economy cars at everyday prices are always available. For special occasions, no occasion at all, or when you
-              just a need a bit more room, call a black car or SUV.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
-  <p>
-    <h2>Our Sacco's</h2>
-  </p>
-
-  <div class="row">
-    <div class="column">
-      <img src="sac1.png" alt="Snow" style="width:100%">
-    </div>
-    <div class="column">
-      <img src="sac2.png" alt="Forest" style="width:100%">
-    </div>
-    <div class="column">
-      <img src="sac3.png" alt="Mountains" style="width:100%">
-
-    </div>
-
-    </br>
-
-    <div class="Benefits">
-      <p>
-        <h2>
-          Easy to manuver
-        </h2>
-        <h4>
-          Get to know where you are going and what time you will get there by checking both the traffic as well as the postion of the
-          matatu.
-        </h4>
-      </p>
-    </div>
-
-    <div class="Benefits">
-      <p>
-        <h2>
-          Easy to manuver
-        </h2>
-        <h4>
-          Get to know where you are going and what time you will get there by checking both the traffic as well as the postion of the
-          matatu.
-        </h4>
-      </p>
-    </div>
-
-    <div class="Benefits">
-      <p>
-        <h2>
-          Easy to manuver
-        </h2>
-        <h4>
-          Get to know where you are going and what time you will get there by checking both the traffic as well as the postion of the
-          matatu.
-        </h4>
-      </p>
-    </div>
-
-    <div class="Benefits">
-      <p>
-        <h2>
-          Easy to manuver
-        </h2>
-        <h4>
-          Get to know where you are going and what time you will get there by checking both the traffic as well as the postion of the
-          matatu.
-        </h4>
-      </p>
-    </div>
-
-    <div id="footer">
-      <h2>Copyright 2018 Strathmore University</h2>
-
-    </div>
-    <script>
-      window.onscroll = function () { myFunction() };
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
+  <?php include("footer.php");?>
 
 </body>
 
