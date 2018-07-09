@@ -1,3 +1,3 @@
 <?php
-require_once("pages/users/findmatatu.php");
+header("Location: pages/users/find a matatu.php");
 ?>

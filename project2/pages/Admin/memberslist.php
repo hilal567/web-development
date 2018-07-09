@@ -11,50 +11,64 @@ require_once("navbar.php");
                     ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../../resources/card.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/card.css">
+        
 
 </head>
 
 <div class="row">
-    <div class="leftcolumn">
+        <div class="leftcolumn" id="recordsupdating"  >
 
 
 
 
-        <div class="card">
-
-
-            <div class="card">
                 <div class="card">
-                <h1 style="color:black;margin-left:30px;font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">The Following are the currently active registered Saccos : </h1>
-                   
+
+
+                        <div class="card">
+                                <div class="card">
+                                        <h1 style="color:black;margin-left:30px;font-family: " Trebuchet MS ", Arial, Helvetica, sans-serif;">The Following are the currently active registered Saccos : </h1>
+
+                                </div>
+
+
+                                <div id="">
+                                        <?php
+                        if ($result->num_rows > 0) {
+                                echo "<table id='customers' >
+                <tr>
+                        <th>Sacco Name</th>
+                        <th>Routes Description</th>
+                </tr>";
+        
+                // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "<form action = 'saccoupdate.php' method='get'>
+                  <tr>
+                        <td>"."<input type=text name='sacco_name' value ='".$row["sacco_name"]."'></td>
+                        <td>"."<input type=text name='description' value ='".$row["description"]."'></td>
+                        <td>"."<input type=submit name='update' value =update ></td>";
+
+                  echo "</tr>
+                  
+                  </form>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+    ?>
+                                </div>
+
+                        </div>
                 </div>
 
 
 
-                    <?php
-                    if ($result->num_rows > 0) {
-                        echo "<table id='customers' ><tr><th>Sacco Name</th><th>Routes Description</th></tr>";
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["sacco_name"]."</td><td>".$row["description"]."</td></tr>";
-                        }
-                        echo "</table>";
-                    } else {
-                        echo "0 results";
-                    }
-                    ?>
 
-            </div>
         </div>
 
-   
-
-
-    </div>
-
-    
-    <div class="rightcolumn">
+        <div class="rightcolumn">
                 <div class="card">
 
                         <div class="" id="signupform">
@@ -75,7 +89,7 @@ require_once("navbar.php");
                                                 <label for="username">Total Registered Members</br>
                                                         <input type="text" name="username" minlength="3" id="username" placeholder="Enter desired username" class="form-control"
                                                         />
-                                                       
+
 
                                                         </br>
 
@@ -97,7 +111,7 @@ require_once("navbar.php");
 
                                                 <div class="clearfix">
                                                         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                                        <button type="submit" name="register" class="btn btn-info" id="register" >Register</button>
+                                                        <button type="submit" name="register" class="btn btn-info" id="register">Register</button>
                                                 </div>
 
 
