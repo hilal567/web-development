@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -52,7 +54,8 @@
   <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
 
   <div class="w3-container">
-    <center><h1 style = "font-family: Comic Sans MS, cursive, sans-serif;" >Digital Matatus</h1></center>
+    <center><h1 style = "font-family: Comic Sans MS, cursive, sans-serif;" >Digital Matatus </h1> </center>
+    <center><p><b> Welcome <?php echo $_SESSION["user"]; ?> </b></p></center>
   </div>
 </div>
 
