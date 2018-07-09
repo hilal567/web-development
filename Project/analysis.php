@@ -1,26 +1,6 @@
 <?php
 require_once("connect.php");
-$sql= "SELECT count(*) FROM user ";
-$result = mysqli_query($link,$sql);
-try {
-    while ($row = mysql_fetch_array($result)) {
-   $data[] = $row['value'];
-}
 
-} catch (Exception $e) {
-    echo 'Message:'.$e->getMessage();
-}
-
-
-/*$result2= mysqli_query($mysqli,$sql2);
-while ($row2 = mysql_fetch_array($result)2) {
-   $data2[] = $row2['value'];
-}
-
-$result3 = mysqli_query($mysqli,$sql3);
-while ($row3 = mysql_fetch_array($result3)) {
-   $data3[] = $row3['value'];
-}*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,9 +16,10 @@ while ($row3 = mysql_fetch_array($result3)) {
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <div id="container3" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
 <script type="text/javascript">
 	
-		Highcharts.chart('container', {
+		/*Highcharts.chart('container', {
 			  chart: {
 			    type: 'column'
 			    renderTo: 'container'
@@ -75,7 +56,7 @@ while ($row3 = mysql_fetch_array($result3)) {
 			  },
 			  series: [{
 			    name: '',
-			    data: [<?php echo join($data, ',') ?>]
+			    data: [<?php //echo join($data, ',') ?>]
 
 			  }]
 		});
@@ -111,7 +92,7 @@ while ($row3 = mysql_fetch_array($result3)) {
 
     series: [{
         name: '',
-        data: [<?php echo join($data, ',') ?>]
+        data: [<?php// echo join($data, ',') ?>]
     }],
 
     responsive: {
@@ -129,7 +110,7 @@ while ($row3 = mysql_fetch_array($result3)) {
         }]
     }
 
-});
+});*/
 		Highcharts.chart('container3', {
     chart: {
         plotBackgroundColor: null,
@@ -187,13 +168,12 @@ while ($row3 = mysql_fetch_array($result3)) {
             y: 1.2
         }, {
             name: 'Other',
-            y: 2.61
+            y: 
         }]
     }]
 });
 </script>
-	<?php //echo join($data, ',') ?>
-	<?php //echo join($data, ',') ?>
+
 
 </body>
 </html>
