@@ -20,7 +20,7 @@ session_start();
 </div>
 <div id="overlay">
 
-  <form class="modal-content" method="post" action="register.php">
+  <form class="modal-content" method="post" action="index.php">
     <div class="container">
       <h4>Sign Up</h4>
       <p>Please fill in this form to create an account.</p>
@@ -28,9 +28,9 @@ session_start();
        <label for="name">Name</br></label>
       <input type="text" placeholder="first name" name="firstname" required style="width:30%">
       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <input type="text" placeholder="first name" name="lastname" required style="width:30%"></br>
+      <input type="text" placeholder="last name" name="lastname" required style="width:30%"></br>
       <label for="email">Email</br></label>
-      <input type="text" placeholder="Enter Email" name="email" required></br>
+      <input type="email" placeholder="Enter Email" name="email" required></br>
 
       <label for="psw">Password</br></label>
       <input type="password" placeholder="Enter Password" name="psw" required></br>
